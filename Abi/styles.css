@@ -1,0 +1,50 @@
+body {
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centra horizontalmente */
+    justify-content: center; /* Centra verticalmente */
+    height: 100vh; /* Ocupar toda la altura de la ventana */
+    margin: 0; /* Elimina el margen por defecto */
+}
+
+.cuadrado-redondeado {
+    width: 120px; /* Ancho del cuadrado */
+    height: 40px; /* Alto del cuadrado */
+    background-color: #ffc965; /* Color de fondo */
+    border-radius: 15px; /* Radio de los bordes redondeados */
+    display: flex; /* Utiliza Flexbox para centrar el texto */
+    justify-content: center; /* Centra el contenido horizontalmente */
+    align-items: center; /* Centra el contenido verticalmente */
+    color: #ffffff; /* Color del texto */
+    font-size: 1.2em; /* Tamaño del texto */
+    text-align: center; /* Alinea el texto al centro */
+    padding: 10px; /* Espaciado interno del contenedor */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra opcional para efecto 3D */
+    text-decoration: none; /* Elimina el subrayado del enlace */
+    margin-top: 20px; /* Espaciado superior para separar del título */
+}
+
+/* Define la animación para el efecto de iluminación */
+@keyframes iluminacion {
+    0% {
+        text-shadow: 0 0 5px rgba(255, 255, 255, 0.3), 0 0 10px rgba(255, 255, 255, 0.2);
+        color: #f2ff80;
+    }
+    50% {
+        text-shadow: 0 0 20px rgba(255, 255, 255, 0.8), 0 0 30px rgba(255, 255, 255, 0.6);
+        color: #ffe600; /* Color brillante cuando está iluminado */
+    }
+    100% {
+        text-shadow: 0 0 5px rgba(255, 255, 255, 0.3), 0 0 10px rgba(255, 255, 255, 0.2);
+        color: #f2ff80;
+    }
+}
+
+/* Aplica la animación y estilos al texto */
+.texto-iluminado {
+    font-size: 3em; /* Tamaño del texto */
+    text-align: center; /* Opcional: centra el texto */
+    animation: iluminacion 1.5s infinite; /* Duración de la animación y repetición infinita */
+}
+
